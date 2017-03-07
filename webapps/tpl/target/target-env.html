@@ -1,0 +1,220 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="row">
+            <h4 class="col-md-2">环保目标</h4>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">查询</button>
+                    </span>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                 添加
+             </button>
+            
+        </div>
+    </div>
+    
+     <!-- Modal 增加 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">数据录入</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">序号：</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">部门：</label>
+                            <div class="col-sm-8">
+                                <select class="form-control">
+                                    <option>部门1</option>
+                                    <option>部门2</option>
+                                    <option>部门3</option>
+                                    <option>部门4</option>
+                                    <option>部门5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">负责人：</label>
+                            <div class="col-sm-8">
+                                <select class="form-control">
+                                    <option>小明</option>
+                                    <option>小明2</option>
+                                    <option>小明3</option>
+                                    <option>小明4</option>
+                                    <option>小明5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">目标：</label>
+                            <div class="col-sm-8">
+                                <select class="form-control">
+                                    <option>COD</option>
+                                    <option>氨氮</option>
+                                    <option>磷</option>
+                                    <option>SO2</option>
+                                    <option>废酸</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">监测地点：</label>
+                            <div class="col-sm-8">
+                                <select class="form-control">
+                                    <option>车间1排放口1</option>
+                                    <option>车间2排放口1</option>
+                                    <option>车间3排放口1</option>
+                                    <option>车间4排放口1</option>
+                                    <option>车间5排放口1</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">监测数据：</label>
+                            <div class="col-sm-8">
+                                <div class="input-group">
+                                <input type="text" class="form-control">
+                                <span class="input-group-addon">mg/l</span>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="panel-body">
+        <table class="table table-bordered table-condensed">
+            <thead>
+                <tr>
+                    <th rowspan="2">序号</th>
+                    <th rowspan="2">目标</th>
+                    <th rowspan="2">指标</th>
+                    <th rowspan="2">实现方法/管理方法</th>
+                    <th rowspan="2">实现日期</th>
+                    <th colspan="4">完成情况</th>
+                    <th>责任</th>    
+                    <th rowspan="2">备注</th>   
+                    <th rowspan="2">编辑</th>
+                    <th rowspan="2">上传</th>             
+                </tr>
+                <tr>
+                    <th>1季</th>
+                    <th>2季</th>
+                    <th>3季</th>
+                    <th>4季</th>
+                    <th>部门</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td rowspan="2">1</td>
+                    <td rowspan="2">生产废气达标排放</td>
+                    <td rowspan="2">颗粒物≤1.0mg/m³</td>
+                    <td>1.焊接废气集中吸尘过滤排放；</td>
+                    <td>2017.12</td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2">生产部</td>
+                    <td></td>
+                    <td>
+                        <button class="btn btn-primary">修改</button>
+                        <button class="btn btn-primary">删除</button>
+                    </td>
+                    <td>是</td>
+                </tr>
+                <tr>
+                    <td>2.采用焊接自带设备除尘排放</td>
+                    <td>2017.12</td>
+                    <td></td>
+                    <td>
+                        <button class="btn btn-primary">修改</button>
+                        <button class="btn btn-primary">删除</button>
+                    </td>
+                    <td>是</td>
+                </tr>
+                
+                <tr>
+                    <td rowspan="4">2</td>
+                    <td rowspan="4">危险化学品泄漏</td>
+                    <td rowspan="2">1.危险化学品确保‘0’泄漏</td>
+                    <td>1.强化运行控制防止跑冒滴漏</td>
+                    <td>2017.12</td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2">物流部</td>
+                    <td></td>
+                    <td>
+                        <button class="btn btn-primary">修改</button>
+                        <button class="btn btn-primary">删除</button>
+                    </td>
+                    <td>是</td>
+                </tr>
+                <tr>
+                    <td>2.与危化供方签《环保协议》</td>
+                    <td>2017.12</td>
+                    <td></td>
+                    <td>
+                        <button class="btn btn-primary">修改</button>
+                        <button class="btn btn-primary">删除</button>
+                    </td>
+                    <td>是</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">2.运输存储化学品保证“0”泄漏</td>
+                    <td>3.文明装卸、防止跑冒滴漏</td>
+                    <td>2017.12</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td rowspan="2">物流部</td>                    
+                    <td></td>
+                    <td>
+                        <button class="btn btn-primary">修改</button>
+                        <button class="btn btn-primary">删除</button>
+                    </td>
+                    <td>是</td>
+                </tr>
+                <tr>
+                    <td>4.与运输供方签《环保协议》</td>
+                    <td>2017.12</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button class="btn btn-primary">修改</button>
+                        <button class="btn btn-primary">删除</button>
+                    </td>
+                    <td>是</td>
+                </tr>
+                
+                
+            </tbody>
+        </table>
+    </div>
+</div>

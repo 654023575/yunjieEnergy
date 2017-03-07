@@ -1,0 +1,122 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="row">
+            <h4 class="col-md-2">环保检测数据</h4>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">查询</button>
+                    </span>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                 添加
+             </button>
+            
+        </div>
+    </div>
+    
+     <!-- Modal 增加 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">环保监测数据添加</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">监测时间：</label>
+                            <div class="col-sm-8">
+                                <input type="datetime-local" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">监测类型：</label>
+                            <div class="col-sm-8">
+                                <select class="form-control">
+                                    <option>部门1</option>
+                                    <option>部门2</option>
+                                    <option>部门3</option>
+                                    <option>部门4</option>
+                                    <option>部门5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">监测项目：</label>
+                            <div class="col-sm-8">
+                                <select class="form-control">
+                                    <option>COD</option>
+                                    <option>氨氮</option>
+                                    <option>磷</option>
+                                    <option>SO2</option>
+                                    <option>废酸</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">监测地点：</label>
+                            <div class="col-sm-8">
+                                <select class="form-control">
+                                    <option>车间1排放口1</option>
+                                    <option>车间2排放口1</option>
+                                    <option>车间3排放口1</option>
+                                    <option>车间4排放口1</option>
+                                    <option>车间5排放口1</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">监测数据：</label>
+                            <div class="col-sm-8">
+                                <div class="input-group">
+                                <input type="password" class="form-control" id="input4" placeholder="">
+                                <span class="input-group-addon">mg/l</span>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="panel-body">
+        <table class="table table-bordered table-condensed">
+            <thead>
+                <tr>
+                    <th>监测类型</th>
+                    <th>监测项目</th>
+                    <th>监测地点</th>
+                    <th>监测数据</th>
+                    <th>登记人</th>
+                    <th>登记时间</th>
+                    <th colspan="2">操作</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button class="btn">修改</button>
+                    </td>
+                    <td>
+                        <button class="btn">删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

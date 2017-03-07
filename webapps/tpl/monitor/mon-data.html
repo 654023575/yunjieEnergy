@@ -1,0 +1,112 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="row">
+            <h4 class="col-md-2">能耗参数</h4>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                 添加
+             </button>             
+        </div>
+    </div>
+    
+    <!-- Modal 添加 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">能耗参数设定</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">能耗种类：</label>
+                            <div class="col-sm-8">
+                                <select class="form-control">
+                                    <option>电量</option>
+                                    <option>煤</option>
+                                    <option>天然气</option>
+                                    <option>汽油</option>
+                                    <option>其他</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">计量单位：</label>
+                            <div class="col-sm-8">
+                                <select class="form-control">
+                                    <option>kWh</option>
+                                    <option>kg</option>
+                                    <option>t</option>
+                                    <option>m3</option>
+                                    <option>L</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">能源单价：</label>
+                            <div class="col-sm-8">
+                                <div class="input-group">
+                                <input type="password" class="form-control" id="input4" placeholder="">
+                                <span class="input-group-addon">单位</span>                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">折标系数：</label>
+                            <div class="col-sm-8">
+                                <div class="input-group">
+                                <input type="password" class="form-control" id="input4" placeholder="">
+                                <span class="input-group-addon">单位</span>                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">碳排单价：</label>
+                            <div class="col-sm-8">
+                                <div class="input-group">
+                                <input type="password" class="form-control" id="input4" placeholder="">
+                                <span class="input-group-addon">单位</span>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="panel-body">
+        <table class="table table-bordered table-condensed">
+            <thead>
+                <tr>
+                    <th>能源种类</th>
+                    <th>单位</th>
+                    <th>折标系数</th>
+                    <th>单价</th>
+                    <th>操作</th>
+                    <th>登记人</th>
+                    <th>登记时间</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button class="btn">修改</button>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>
