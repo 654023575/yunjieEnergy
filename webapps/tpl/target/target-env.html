@@ -26,28 +26,29 @@
                     <h4 class="modal-title" id="myModalLabel">数据录入</h4>
                 </div>
                 <div class="modal-body">
-                    <form class="form-horizontal">
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">序号：</label>
-                            <div class="col-sm-8">
+                    <form action="" class="form-horizontal">
+                        <table class="table table-bordered">
+                        <tr>
+                            <td colspan="2">序号</td>
+                            <td>
                                 <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">部门：</label>
-                            <div class="col-sm-8">
-                                <select class="form-control">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">部门</td>
+                            <td>
+                               <select class="form-control">
                                     <option>部门1</option>
                                     <option>部门2</option>
                                     <option>部门3</option>
                                     <option>部门4</option>
                                     <option>部门5</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">负责人：</label>
-                            <div class="col-sm-8">
+                                </select> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">负责人</td>
+                            <td>
                                 <select class="form-control">
                                     <option>小明</option>
                                     <option>小明2</option>
@@ -55,11 +56,11 @@
                                     <option>小明4</option>
                                     <option>小明5</option>
                                 </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">目标：</label>
-                            <div class="col-sm-8">
+                                </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">目标</td>
+                            <td>
                                 <select class="form-control">
                                     <option>COD</option>
                                     <option>氨氮</option>
@@ -67,29 +68,56 @@
                                     <option>SO2</option>
                                     <option>废酸</option>
                                 </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">监测地点：</label>
-                            <div class="col-sm-8">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">指标</td>
+                            <td>
                                 <select class="form-control">
-                                    <option>车间1排放口1</option>
-                                    <option>车间2排放口1</option>
-                                    <option>车间3排放口1</option>
-                                    <option>车间4排放口1</option>
-                                    <option>车间5排放口1</option>
+                                    <option>颗粒物≤1.0mg/m³</option>
+                                    <option>颗粒物≤1.0mg/m³</option>
+                                    <option>颗粒物≤1.0mg/m³</option>
+                                    <option>颗粒物≤1.0mg/m³</option>
+                                    <option>颗粒物≤1.0mg/m³</option>
                                 </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">监测数据：</label>
-                            <div class="col-sm-8">
-                                <div class="input-group">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">实现方法/管理方案：</td>
+                            <td>
                                 <input type="text" class="form-control">
-                                <span class="input-group-addon">mg/l</span>                                    
-                                </div>
-                            </div>
-                        </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">实现日期：</td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">完成情况</td>
+                            <td>一季度</td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>二季度</td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>三季度</td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>四季度</td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">备注</td>
+                            <td>
+                                 <input type="text" class="form-control">
+                            </td>
+                        </tr>
+                    </table>    
                     </form>
                 </div>
                 <div class="modal-footer">

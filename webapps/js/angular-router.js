@@ -27,4 +27,28 @@ app.config(['$routeProvider',function($routeProvider) {
     .when('/target-env',{
         templateUrl:'./tpl/target/target-env.html'
     })
+    .when('/target-data',{
+        templateUrl:'./tpl/target/target-data.html'
+    })
+    .when('/erengy-manage',{
+        templateUrl:'./tpl/equipment/energy-manage.html'
+    })
+    .when('/metering-manage',{
+        templateUrl:'./tpl/equipment/metering-manage.html'
+    })
+    .when('/equip-test',{
+        templateUrl:'./tpl/equipment/equip-test.html'
+    })
+    .when('/emerg-plan',{
+        templateUrl:'./tpl/emergency/emerg-plan.html'
+    })
+    .when('/emerg-drill',{
+        templateUrl:'./tpl/emergency/emerg-drill.html'
+    })
+    .when('/teach-train',{
+        templateUrl:'./tpl/teach/teach-train.html'
+    })
+    .when('/poll-source',{
+        templateUrl:'./tpl/pollution/poll-source.html'
+    })
 }])

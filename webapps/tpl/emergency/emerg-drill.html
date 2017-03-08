@@ -1,0 +1,132 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="row">
+            <h4 class="col-md-2">应急演练管理 </h4>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">查询</button>
+                    <button class="btn btn-default" type="button">高级查询</button>
+                    </span>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                 添加文件
+             </button>
+        </div>
+    </div>
+    <div class="panel-body">
+        <table class="table table-bordered table-condensed">
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>文件名称</th>
+                    <th>文件编号</th>
+                    <th>类别</th>
+                    <th>文件描述</th>
+                    <th>修改</th>
+                    <th>下载</th>
+                    <th>删除</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button class="btn">修改</button>
+                    </td>
+                    <td>
+                        <button class="btn">下载</button>
+                    </td>
+                    <td>口</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="panel-footer">
+        <div class="row">
+            <p class="col-md-8">双击每行可查看文件详细资料</p>
+            <div class="col-md-4">
+                口全选
+                <button class="btn">删除</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 增加 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">添加应急演练(带*号为必填选项)</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">演练类别*：</label>
+                        <div class="col-sm-8">
+                            <select class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">演练名称*：</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">演练编号*：</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">演练描述：</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">附件地址：</label>
+                        <div class="col-sm-8">
+                            <input type="file" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">演练结果与评价：</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">是否审核：</label>
+                        <div class="col-sm-8">
+                            <label class="checkbox-inline">
+                            <input type="radio" name="optionsRadiosinline" id="optionsRadios3" value="option1">是
+                           </label>
+                            <label class="checkbox-inline">
+                            <input type="radio" name="optionsRadiosinline" id="optionsRadios4"  value="option2">否
+                        </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">确定</button>
+            </div>
+        </div>
+    </div>
+</div>

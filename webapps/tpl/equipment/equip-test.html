@@ -1,0 +1,130 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="row">
+            <h4 class="col-md-2">检定计量设备管理</h4>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">查询</button>
+                    </span>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                 添加
+             </button>  
+        </div>
+    </div>
+    <div class="panel-body">
+        <table class="table table-bordered table-condensed">
+            
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>设备名称</th>
+                    <th>计量项目</th>
+                    <th>计量对象</th>
+                    <th>安装对象</th>
+                    <th>计量级别</th>
+                    <th>运行状况</th>
+                    <th>到期时间</th>
+                    <th>备注</th>
+                    <th>编辑</th>
+                    <th>删除</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button class="btn btn-primary">修改</button>
+                    </td>
+                    <td>口</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    <!-- Modal 增加 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">检定录入</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">检定人：</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control">
+                            </div>
+                            </div>
+                            <div class="form-group">
+                            <label class="col-sm-3 control-label">检定日期：</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">设备名称：</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">计量项目：</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control">
+                            </div> 
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">计量对象：</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control">
+                            </div> 
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">安装地点：</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control">
+                            </div> 
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">检定设备：</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control">
+                            </div> 
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">运行状况：</label>
+                            <div class="col-sm-8">
+                                <select class="form-control">
+                                    <option>未启用</option>
+                                    <option>再用</option>
+                                    <option>维修中</option>
+                                    <option>停用</option>
+                                    <option>封存</option>
+                                    <option>报废</option>
+                                </select>
+                            </div> 
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>

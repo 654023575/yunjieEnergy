@@ -1,17 +1,18 @@
 <div class="panel panel-default">
     <div class="panel-heading">
         <div class="row">
-            <h4 class="col-md-2">环保检测数据</h4>
+            <h4 class="col-md-2">应急预案管理 </h4>
             <div class="col-md-4">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search for...">
                     <span class="input-group-btn">
                     <button class="btn btn-default" type="button">查询</button>
+                    <button class="btn btn-default" type="button">高级查询</button>
                     </span>
                 </div>
             </div>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-                 添加
+                 添加文件
              </button>
         </div>
     </div> 
@@ -19,13 +20,14 @@
         <table class="table table-bordered table-condensed">
             <thead>
                 <tr>
-                    <th>监测类型</th>
-                    <th>监测项目</th>
-                    <th>监测地点</th>
-                    <th>监测数据</th>
-                    <th>登记人</th>
-                    <th>登记时间</th>
-                    <th colspan="2">操作</th>                    
+                    <th>序号</th>
+                    <th>文件名称</th>
+                    <th>文件编号</th>
+                    <th>类别</th>
+                    <th>文件描述</th>
+                    <th>修改</th>                    
+                    <th>下载</th>
+                    <th>删除</th>                    
                 </tr>
             </thead>
             <tbody>
@@ -35,16 +37,25 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
                     <td>
                         <button class="btn">修改</button>
                     </td>
                     <td>
-                        <button class="btn">删除</button>
+                        <button class="btn">下载</button>
                     </td>
+                    <td>口</td>
                 </tr>
             </tbody>
         </table>
+    </div>
+    <div class="panel-footer">
+        <div class="row">
+            <p class="col-md-8">双击每行可查看文件详细资料</p>
+            <div class="col-md-4">
+                口全选
+              <button class="btn">删除</button>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -54,59 +65,43 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">环保监测数据添加</h4>
+                    <h4 class="modal-title" id="myModalLabel">添加应急预案</h4>
                 </div>
                 <div class="modal-body">
                     <form class="form-horizontal">
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">监测时间：</label>
+                            <label class="col-sm-3 control-label">应急预案名称：</label>
                             <div class="col-sm-8">
-                                <input type="datetime-local" class="form-control" placeholder="">
+                                <input type="text" class="form-control" placeholder="">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">监测类型：</label>
+                            <label class="col-sm-3 control-label">应急预案编号：</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">预案事件类别：</label>
                             <div class="col-sm-8">
                                 <select class="form-control">
-                                    <option>部门1</option>
-                                    <option>部门2</option>
-                                    <option>部门3</option>
-                                    <option>部门4</option>
-                                    <option>部门5</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">监测项目：</label>
+                            <label class="col-sm-3 control-label">附件地址：</label>
                             <div class="col-sm-8">
-                                <select class="form-control">
-                                    <option>COD</option>
-                                    <option>氨氮</option>
-                                    <option>磷</option>
-                                    <option>SO2</option>
-                                    <option>废酸</option>
-                                </select>
+                                <input type="file" class="form-control" placeholder="">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">监测地点：</label>
+                            <label class="col-sm-3 control-label">预案描述：</label>
                             <div class="col-sm-8">
-                                <select class="form-control">
-                                    <option>车间1排放口1</option>
-                                    <option>车间2排放口1</option>
-                                    <option>车间3排放口1</option>
-                                    <option>车间4排放口1</option>
-                                    <option>车间5排放口1</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">监测数据：</label>
-                            <div class="col-sm-8">
-                                <div class="input-group">
-                                <input type="password" class="form-control" id="input4" placeholder="">
-                                <span class="input-group-addon">mg/l</span>                                    
-                                </div>
+                                <textarea class="form-control" rows="3"></textarea>
                             </div>
                         </div>
                     </form>

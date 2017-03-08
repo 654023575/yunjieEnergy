@@ -1,0 +1,204 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="row">
+            <h4 class="col-md-2">计量设备管理</h4>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">查询</button>
+                    </span>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                 添加
+             </button>
+            <!--<button class="btn btn-success col-md-2">参数设置</button>-->
+        </div>
+    </div>
+    <div class="panel-body">
+        <table class="table table-bordered table-condensed">
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>设备名称</th>
+                    <th>设备编号</th>
+                    <th>计量种类</th>
+                    <th>计量级别</th>
+                    <th>规格型号</th>
+                    <th>到期日期</th>
+                    <th>安装地点</th>
+                    <th>运行状态</th>
+                    <th>检定日期</th>
+                    <th>检定员</th>
+                    <th>备注</th>
+                    <th>编辑</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button class="btn btn-primary">修改</button>
+                    </td>
+                    <td>口</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    <!-- Modal 增加 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">添加计量设备</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">设备名称：</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control">
+                            </div>
+                            
+                            <label class="col-sm-3 control-label">设备编号：</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control">
+                            </div> 
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">规格型号：</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control">
+                            </div>
+                            <label class="col-sm-3 control-label">生产厂商：</label>
+                            <div class="col-sm-3">
+                                <select class="form-control">
+                                    <option>厂商1</option>
+                                    <option>厂商1</option>
+                                    <option>厂商1</option>
+                                    <option>厂商1</option>
+                                </select>
+                            </div> 
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">计量对象：</label>
+                            <div class="col-sm-3">
+                                <select class="form-control">
+                                    <option>机器</option>
+                                    <option>机器</option>
+                                    <option>机器</option>
+                                    <option>机器</option>
+                                    <option>机器</option>
+                                </select>
+                            </div>
+                            <label class="col-sm-3 control-label">计量级别：</label>
+                            <div class="col-sm-3">
+                                <select class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">计量对象：</label>
+                            <div class="col-sm-3">
+                                <select class="form-control">
+                                    <option>机器</option>
+                                    <option>机器</option>
+                                    <option>机器</option>
+                                    <option>机器</option>
+                                    <option>机器</option>
+                                </select>
+                            </div>
+                            <label class="col-sm-3 control-label">计量级别：</label>
+                            <div class="col-sm-3">
+                                <select class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                        </div>  
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">使用单位：</label>
+                            <div class="col-sm-3">
+                                <select class="form-control">
+                                    <option>水</option>
+                                    <option>电</option>
+                                    <option>水</option>
+                                    <option>电</option>
+                                </select>
+                            </div>
+                            <label class="col-sm-3 control-label">安装地点：</label>
+                            <div class="col-sm-3">
+                                <select class="form-control">
+                                    <option>水</option>
+                                    <option>电</option>
+                                    <option>水</option>
+                                    <option>电</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">使用期限：</label>
+                            <div class="col-sm-3">
+                                <input type="text"class="form-control">
+                            </div>
+                            <label class="col-sm-3 control-label">到期时间：</label>
+                            <div class="col-sm-3">
+                                <input type="text"class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">检定周期：</label>
+                            <div class="col-sm-3">
+                                <input type="text"class="form-control">
+                            </div>
+                            <label class="col-sm-3 control-label">使用状况：</label>
+                            <div class="col-sm-3">
+                                <select class="form-control">
+                                    <option>未启用</option>
+                                    <option>再用</option>
+                                    <option>维修中</option>
+                                    <option>停用</option>
+                                    <option>封存</option>
+                                    <option>报废</option>
+                                </select>
+                            </div>
+                        </div>             
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">检定人员：</label>
+                            <div class="col-sm-3">
+                                <input type="text"class="form-control">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
