@@ -69,8 +69,9 @@ app.controller('lawManaCtrl', function($scope) {
         ];
         
         $scope.sites1 = site;
+        console.log($scope.sites1)
         $scope.change = function(selected1){
-            console.log(selected1.children)
             $scope.sites2 = selected1.children;
+            console.log($scope.selected1)
         }
 });
