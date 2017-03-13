@@ -49,34 +49,95 @@ app.config(['$routeProvider',
             })
     }])
 
-
-app.controller('lawManaCtrl', function($scope) {
+//法律法规管理controller
+app.controller('lawManaCtrl', function ($scope,$http) {
     // 简单二级联动  
- $scope.sites1= [
-            // {"site":"请选择一级","children":[
-            //     {"site":"请选择二级"}
-            // ]},
-            {"site":"法律法规","children":[
-                {"site":"国家法律"},
-                {"site":"地方法律"},
-                {"site":"行业法律"}
-            ]},
-            {"site":"标准规范","children":[
-                {"site":"国家标准"},
-                {"site":"地方标准"},
-                {"site":"行业标准"}
-            ]},
-            {"site":"上传文件","children":[
-                {"site":"单位文件"}  
-            ]}
-        ];
-   $scope.change = function (selected1,sites1){
-       angular.forEach(sites1,function(i,j){
-           if(selected1 == i.site ){
-               $scope.sites2 = i.children;
-           }
-       })
-   }
-        
-        
+    $scope.sites1 = [
+        // {"site":"请选择一级","children":[
+        //     {"site":"请选择二级"}
+        // ]},
+        {
+            "site": "法律法规", "children": [
+                { "site": "国家法律" },
+                { "site": "地方法律" },
+                { "site": "行业法律" }
+            ]
+        },
+        {
+            "site": "标准规范", "children": [
+                { "site": "国家标准" },
+                { "site": "地方标准" },
+                { "site": "行业标准" }
+            ]
+        },
+        {
+            "site": "上传文件", "children": [
+                { "site": "单位文件" }
+            ]
+        }
+    ];
+    $scope.change = function (selected1, sites1) {
+        angular.forEach(sites1, function (i, j) {
+            if (selected1 == i.site) {
+                $scope.sites2 = i.children;
+            }
+        })
+    }
+    //分页
 });
+
+
+
+        //法律审查controller
+        app.controller('lawCheckCtrl', function ($scope) {
+            // 简单二级联动  
+            $scope.sites1 = [
+                // {"site":"请选择一级","children":[
+                //     {"site":"请选择二级"}
+                // ]},
+                {
+                    "site": "法律法规", "children": [
+                        { "site": "国家法律" },
+                        { "site": "地方法律" },
+                        { "site": "行业法律" }
+                    ]
+                },
+                {
+                    "site": "标准规范", "children": [
+                        { "site": "国家标准" },
+                        { "site": "地方标准" },
+                        { "site": "行业标准" }
+                    ]
+                },
+                {
+                    "site": "上传文件", "children": [
+                        { "site": "单位文件" }
+                    ]
+                }
+            ];
+            $scope.change = function (selected1, sites1) {
+                angular.forEach(sites1, function (i, j) {
+                    if (selected1 == i.site) {
+                        $scope.sites2 = i.children;
+                    }
+                })
+            }
+
+        });
+
+        //能源数据参数设定Ctrl
+        app.controller('monPowerCtrl', function ($scope) {
+            $scope.types = [
+                { type: '电量', symbols: '度' },
+                { type: '煤', symbols: '吨' },
+                { type: '天然气', symbols: '立方米' },
+                { type: '汽油', symbols: '升' }
+            ];
+            $scope.change = function (type1, types) {
+                angular.forEach(types, function (i, j) {
+                    if (type1 == i.type) {
+                        $scope.symbols = i.symbols;
+                    }
+                })
+            }
+        });

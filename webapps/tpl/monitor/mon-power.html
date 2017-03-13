@@ -1,3 +1,4 @@
+<div ng-controller="monPowerCtrl">
 <div class="panel panel-default">
     <div class="panel-heading">
         <div class="row">
@@ -45,6 +46,15 @@
                 </tr>
             </tbody>
         </table>
+        <ul class="pagination pull-right">
+        <li><a href="">&laquo;</a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="">2</a></li>
+        <li><a href="">3</a></li>
+        <li><a href="">4</a></li>
+        <li><a href="">5</a></li>
+        <li><a href="">&raquo;</a></li>
+        </ul>
     </div>
 </div>
 <!-- Modal 增加 -->
@@ -60,7 +70,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label">能耗时间：</label>
                             <div class="col-sm-8">
-                                <input type="datetime-local" class="form-control" placeholder="Email">
+                                <input type="date" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
@@ -78,19 +88,18 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label">能耗种类：</label>
                             <div class="col-sm-8">
-                                <select class="form-control">
-                                    <option>电量</option>
-                                    <option>煤</option>
-                                    <option>天然气</option>
-                                    <option>汽油</option>
-                                    <option>部门5</option>
+                                <select class="form-control" ng-model="type1" ng-change="change(type1,types)">
+                                    <option ng-repeat="t in types" value="{{t.type}}">{{t.type}}</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-3 control-label">消耗量：</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" placeholder="">
+                                <div class="input-group">
+                                <input type="text" class="form-control">
+                                <span class="input-group-addon">{{symbols}}</span>                                    
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -104,3 +113,4 @@
     </div>
 
 
+</div>
