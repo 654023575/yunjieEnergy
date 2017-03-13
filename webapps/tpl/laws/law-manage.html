@@ -90,14 +90,14 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label">文件分类*：</label>
                             <div class="col-sm-4">
-                            <select class="form-control" ng-model="selected1" ng-options="selected1.site for selected1 in sites1" ng-change="change(selected1)"> 
-                            <option value="">--选择一级--</option>
+                            <select class="form-control" ng-model="selected1" ng-change="change(selected1,sites1)">
+                            <option ng-repeat="x in sites1" value="{{x.site}}">{{x.site}}</option>
                             </select>
                             </div>
                             <div class="col-sm-4">
-                            <select class="form-control" ng-model="selected2" ng-options="selected2.site for selected2 in sites2"> 
-                            <option value="">--选择二级--</option>
-                            </select>   
+                            <select class="form-control" ng-model="selected2">                           
+                            <option ng-repeat="f in sites2" value="{{f.site}}">{{f.site}}</option>
+                            </select> 
                             </div>
                         </div>
                         <div class="form-group">

@@ -51,27 +51,32 @@ app.config(['$routeProvider',
 
 
 app.controller('lawManaCtrl', function($scope) {
-    // 简单二级联动
-  var site= [
+    // 简单二级联动  
+ $scope.sites1= [
+            // {"site":"请选择一级","children":[
+            //     {"site":"请选择二级"}
+            // ]},
             {"site":"法律法规","children":[
                 {"site":"国家法律"},
                 {"site":"地方法律"},
                 {"site":"行业法律"}
             ]},
-            {"site":'标准规范',"children":[
+            {"site":"标准规范","children":[
                 {"site":"国家标准"},
                 {"site":"地方标准"},
                 {"site":"行业标准"}
             ]},
-            {"site":'上传文件',"children":[
+            {"site":"上传文件","children":[
                 {"site":"单位文件"}  
             ]}
         ];
+   $scope.change = function (selected1,sites1){
+       angular.forEach(sites1,function(i,j){
+           if(selected1 == i.site ){
+               $scope.sites2 = i.children;
+           }
+       })
+   }
         
-        $scope.sites1 = site;
-        console.log($scope.sites1)
-        $scope.change = function(selected1){
-            $scope.sites2 = selected1.children;
-            console.log($scope.selected1)
-        }
+        
 });
