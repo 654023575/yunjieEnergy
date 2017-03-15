@@ -27,14 +27,14 @@
                 </tr>
             </thead>
             <tbody>
-                 <tr>
-                     <td>1</td>
-                     <td>刑法</td>
-                     <td>001</td>
-                     <td>法律</td>
-                     <td>123</td>
-                     <td>123</td>
-                     <td>是</td>
+                 <tr ng-repeat="x in names">
+                     <td>{{$index + 1}}</td>
+                     <td>{{x.f_name}}</td>
+                     <td>{{x.f_id}}</td>
+                     <td>{{x.f_tag}}</td>
+                     <td>{{x.f_desc}}</td>
+                     <td>{{x.approve_time}}</td>
+                     <td>{{x.approve_state}}</td>
                      <td>小明</td>
                      <td>2010</td>
                      <td>
@@ -46,93 +46,25 @@
                          <input type="checkbox">
                      </td>
                  </tr>
-                 <tr>
-                     <td>1</td>
-                     <td>刑法</td>
-                     <td>001</td>
-                     <td>法律</td>
-                     <td>123</td>
-                     <td>123</td>
-                     <td>是</td>
-                     <td>小明</td>
-                     <td>2010</td>
-                     <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">
-                         修改
-                        </button>
-                     </td>
-                     <td>
-                         <input type="checkbox">
-                     </td>
-                 </tr>
-                 <tr>
-                     <td>1</td>
-                     <td>刑法</td>
-                     <td>001</td>
-                     <td>法律</td>
-                     <td>123</td>
-                     <td>123</td>
-                     <td>是</td>
-                     <td>小明</td>
-                     <td>2010</td>
-                     <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">
-                         修改
-                        </button>
-                     </td>
-                     <td>
-                         <input type="checkbox">
-                     </td>
-                 </tr>
-                 <tr>
-                     <td>1</td>
-                     <td>刑法</td>
-                     <td>001</td>
-                     <td>法律</td>
-                     <td>123</td>
-                     <td>123</td>
-                     <td>是</td>
-                     <td>小明</td>
-                     <td>2010</td>
-                     <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">
-                         修改
-                        </button>
-                     </td>
-                     <td>
-                         <input type="checkbox">
-                     </td>
-                 </tr>
-                 <tr>
-                     <td>1</td>
-                     <td>刑法</td>
-                     <td>001</td>
-                     <td>法律</td>
-                     <td>123</td>
-                     <td>123</td>
-                     <td>是</td>
-                     <td>小明</td>
-                     <td>2010</td>
-                     <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">
-                         修改
-                        </button>
-                     </td>
-                     <td>
-                         <input type="checkbox">
-                     </td>
-                 </tr>   
             </tbody>
         </table>
-        <ul class="pagination pull-right">
-        <li><a href="">&laquo;</a></li>
-        <li class="active"><a href="#">1</a></li>
-        <li><a href="">2</a></li>
-        <li><a href="">3</a></li>
-        <li><a href="">4</a></li>
-        <li><a href="">5</a></li>
-        <li><a href="">&raquo;</a></li>
-        </ul>
+        <nav>
+            <ul class="pagination">
+                <li>
+                    <a ng-click="Previous()">
+                        <span>上一页</span>
+                    </a>
+                </li>
+                <li ng-repeat="page in pageList" ng-class="{active: isActivePage(page)}">
+                    <a ng-click="selectPage(page)">{{ page }}</a>
+                </li>
+                <li>
+                    <a ng-click="Next()">
+                        <span>下一页</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </div>
     
     <div class="panel-footer">
@@ -143,11 +75,8 @@
             <button class="btn btn-success">删除文件</button>
              </div>
         </div>
-        
     </div>
-
 </div>
-
 <button class="btn btn-success pull-right">上报审批</button>
 
 <!-- 添加文件 -->
